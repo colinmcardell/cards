@@ -24,14 +24,14 @@ export default [
     output: [
       {
         name: moduleName,
-        file: pkg.browser,
+        file: pkg.main,
         format: 'iife',
         sourcemap: 'inline',
         banner,
       },
       {
         name: moduleName,
-        file: pkg.browser.replace('.js', '.min.js'),
+        file: pkg.main.replace('.js', '.min.js'),
         format: 'iife',
         sourcemap: 'inline',
         banner,
@@ -48,7 +48,7 @@ export default [
         configFile: path.resolve(__dirname, '.babelrc.js'),
       }),
       pluginNodeResolve({
-        browser: true,
+        browser: false,
       }),
     ],
   },
