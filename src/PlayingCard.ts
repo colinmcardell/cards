@@ -226,8 +226,8 @@ export const ValueSuit: Record<Value, Suit> = {
  * game/variation
  */
 export enum DeckType {
-  Standard = 0,
-  Jokers = 1 << 0,
+  Standard = 1 << 0,
+  Jokers = 1 << 1,
 }
 
 /** A lookup up table of DeckType to an array of Value(s) */
