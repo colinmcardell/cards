@@ -111,6 +111,9 @@ export class CardSet<T extends Card> {
    * @return boolean value indicating success or failure of the move operation
    */
   move(from: number, to: number): boolean {
+    if (from === to) {
+      return true
+    }
     const { length } = this.cards
     if (length === 0 || length === 1) {
       return false
